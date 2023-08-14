@@ -1,12 +1,13 @@
-package Video_3;
+package Video_5;
 
+import Escenarios.Mvn.V3_Esc_ConsultarLibrerias;
 import Recursos.Navegador.Pag_Navegador;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
-public class V3_BusquedaGoogle {
+public class V5_BusquedaGoogle {
     WebDriver driver;
 
     @Before
@@ -24,6 +25,12 @@ public class V3_BusquedaGoogle {
 
     @Test
     public void RealizarConsultasGoogle() {
+        V3_Esc_ConsultarLibrerias esc_consultarLibrerias = new V3_Esc_ConsultarLibrerias(driver);
+        esc_consultarLibrerias.ConsultarLibreriasMvn(driver);
+        try{
+            Thread.sleep(2000);
+        }catch (Exception fallo){
 
+        }
     }
 }

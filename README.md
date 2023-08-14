@@ -15,3 +15,6 @@ Contenido
 1) configuración ambiente
 2) Abrir navegador
 3) Metodos after y before
+4) Crear xpath (Ver la lista en youtube)
+5) Escribir y hacer click en los elementos
+6) Metodos get y set
