@@ -13,8 +13,15 @@ Diseño :
 Contenido
 
 1) configuración ambiente
-2) Abrir navegador
-3) Metodos after y before
+2) Abrir navegador 
+   * abrir mvn repository
+3) Metodos after y before * abrir mvn repository 
+   * abrir mvn repository
 4) Crear xpath (Ver la lista en youtube)
-5) Escribir y hacer click en los elementos
-6) Metodos get y set
+5) Escribir y hacer click en los elementos 
+   * buscar una libreria en mvn repository
+6) Metodos get y set 
+   * Escribir una ciudad origen y destino en ticketesbaratos.com
+   * Escribir un usuario y clave en facebook
+7) Metodos staticos e implementación Metodos get y set 
+   * Realizar registro en facebook nombre, apellido ,correo y clave
