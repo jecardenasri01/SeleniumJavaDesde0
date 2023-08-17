@@ -4,6 +4,9 @@ Este proyecto maven es diseñado por jeisson cardenas para el canal testing con 
 Para mayor información seguir el contenido de la lista :
 https://youtube.com/playlist?list=PLV-OiGRdqkhI5G_ZgLH2Qva9m5ijtHNGy
 
+Ponga en practica con ejemplos :
+* 1 : https://youtube.com/playlist?list=PLV-OiGRdqkhKuHC9Fr-hQvE0jMSXECCVz
+
 Diseño :
 * Proyecto: maven
 * Version Apache Maven: 3.8.6 
