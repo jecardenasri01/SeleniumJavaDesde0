@@ -1,7 +1,10 @@
 package Recursos.Utilidades;
 
+import Recursos.Evidencias.Rec_Evidencias;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class Rec_Global {
@@ -11,7 +14,20 @@ public class Rec_Global {
         driver=_driver;
     }
     public void Click(String xpath){
-        driver.findElement(By.xpath(xpath)).click();
+        Rec_Evidencias rec_evidencias = new Rec_Evidencias(driver);
+        try{
+            rec_evidencias.ResaltarElementos(xpath,"r");
+            driver.findElement(By.xpath(xpath)).click();
+            rec_evidencias.ResaltarElementos(xpath,"n");
+
+        } catch (Exception Fallo){
+            rec_evidencias.ResaltarElementos(xpath,"r");
+            WebElement elemento = driver.findElement(By.xpath(xpath));
+            JavascriptExecutor js = (JavascriptExecutor)driver;
+            js.executeScript("arguments[0].click();",elemento);
+            rec_evidencias.ResaltarElementos(xpath,"n");
+        }
+
     }
     public void Escribir(String texto,String xpath){
         driver.findElement(By.xpath(xpath)).clear();
@@ -28,5 +44,15 @@ public class Rec_Global {
     public void ListaPosicion(Integer valor,String xpath){
         Select lista = new Select(driver.findElement(By.xpath(xpath)));
         lista.selectByIndex(valor);
+    }
+    public void JsModificarAtributo(String xpath,String atributo,String variable){
+        WebElement elemento = driver.findElement(By.xpath(xpath));
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].setAttribute('"+atributo+"','"+variable+"')",elemento);
+    }
+    public void JsRemoverAtributo(String xpath,String atributo){
+        WebElement elemento = driver.findElement(By.xpath(xpath));
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].removeAttribute('"+atributo+"')",elemento);
     }
 }

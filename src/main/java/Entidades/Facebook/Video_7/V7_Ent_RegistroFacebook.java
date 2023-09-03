@@ -1,4 +1,4 @@
-package Entidades.Facebook;
+package Entidades.Facebook.Video_7;
 
 public class V7_Ent_RegistroFacebook {
     public String nombre;

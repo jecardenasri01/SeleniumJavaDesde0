@@ -1,8 +1,7 @@
 package Video_6;
 
-import Entidades.Facebook.V6_Ent_LoginFacebook;
-import Escenarios.Facebook.V6_Esc_PaginaInicioFacebook;
-import Escenarios.Ticketes.V6_Esc_PaginaInicio;
+import Entidades.Facebook.Video_6.V6_Ent_LoginFacebook;
+import Escenarios.Facebook.Video_6.V6_Esc_PaginaInicioFacebook;
 import Recursos.Navegador.Pag_Navegador;
 import org.junit.After;
 import org.junit.Before;

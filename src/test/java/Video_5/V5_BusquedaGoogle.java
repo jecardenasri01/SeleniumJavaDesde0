@@ -1,6 +1,6 @@
 package Video_5;
 
-import Escenarios.Mvn.V3_Esc_ConsultarLibrerias;
+import Escenarios.Mvn.Video_3.V3_Esc_ConsultarLibrerias;
 import Recursos.Navegador.Pag_Navegador;
 import org.junit.After;
 import org.junit.Before;

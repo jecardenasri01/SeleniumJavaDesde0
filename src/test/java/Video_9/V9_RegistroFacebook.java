@@ -1,8 +1,7 @@
 package Video_9;
 
-import Entidades.Facebook.V7_Ent_RegistroFacebook;
-import Escenarios.Facebook.V8_Esc_PaginaInicioFacebook;
-import Escenarios.Facebook.V9_Esc_PaginaInicioFacebook;
+import Entidades.Facebook.Video_7.V7_Ent_RegistroFacebook;
+import Escenarios.Facebook.Video_9.V9_Esc_PaginaInicioFacebook;
 import Recursos.Navegador.Pag_Navegador;
 import org.junit.After;
 import org.junit.Before;
@@ -51,6 +50,5 @@ public class V9_RegistroFacebook {
     public void RealizarRegistroIngreso() {
         InstanciasBasicas();
         V9_esc_paginaInicioFacebook.RegistroFacebook(v7_ent_registroFacebook);
-
     }
 }

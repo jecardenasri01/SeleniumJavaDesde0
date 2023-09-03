@@ -1,12 +1,12 @@
-package Escenarios.Facebook;
+package Escenarios.Facebook.Video_8;
 
-import Entidades.Facebook.V7_Ent_RegistroFacebook;
+import Entidades.Facebook.Video_7.V7_Ent_RegistroFacebook;
 import Recursos.Utilidades.Rec_Global;
 import org.openqa.selenium.WebDriver;
 
-public class V9_Esc_PaginaInicioFacebook {
+public class V8_Esc_PaginaInicioFacebook {
     public static WebDriver driver;
-    public V9_Esc_PaginaInicioFacebook(WebDriver _driver) {
+    public V8_Esc_PaginaInicioFacebook(WebDriver _driver) {
         driver = _driver;
     }
 
@@ -33,24 +33,5 @@ public class V9_Esc_PaginaInicioFacebook {
         rec_global.ListaValor(ent_registrofacebook.dia,list_dia);
         rec_global.ListaTexto(ent_registrofacebook.mes,list_mes);
         rec_global.ListaTexto(ent_registrofacebook.ano,list_ano);
-        SeleccionarGenero(ent_registrofacebook.sexo);
-    }
-    public void SeleccionarGenero(String genero){
-        Rec_Global rec_global = new Rec_Global(driver);
-        String inp_mujer="//*[@name='sex' and @value='1']";
-        String inp_personalizado="//*[@name='sex' and @value='-1']";
-        String inp_hombre="//*[@name='sex' and @value='2']";
-
-        switch (genero){
-            case "mujer":
-                rec_global.Click(inp_mujer);
-                break;
-            case "hombre":
-                rec_global.Click(inp_hombre);
-                break;
-            case "personalizado":
-                rec_global.Click(inp_personalizado);
-                break;
-        }
     }
 }

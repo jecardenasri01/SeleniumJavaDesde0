@@ -13,6 +13,12 @@ Diseño :
 * Versión Chrome compatible : 115.0.5790.171
 * Version Java : 1.8.0_202
 
+Url Usadas
+Maven Repository : https://mvnrepository.com/
+Facebook : https://www.facebook.com/
+Ticketes baratos : https://www.tiquetesbaratos.com/
+
+
 Contenido
 
 1) Configuración ambiente (Ver la lista en youtube)
@@ -29,6 +35,6 @@ Contenido
 7) Metodos staticos e implementación Metodos get y set 
    * Realizar registro en facebook nombre, apellido ,correo y clave
 8) Manejo de listas
-   * Realizar registro en facebook dia , mes y año 
+   * Realizar registro en facebook dia , mes y año
 9) Condicionales if,else if y switch
    * Realizar registro en facebook genero mujer,hombre o personalizado

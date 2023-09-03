@@ -1,4 +1,4 @@
-package Escenarios.Ticketes;
+package Escenarios.TicketesBaratos.Video_6;
 
 import Recursos.Utilidades.Rec_Global;
 import org.openqa.selenium.WebDriver;

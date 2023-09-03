@@ -1,6 +1,6 @@
 package Video_6;
 
-import Escenarios.Ticketes.V6_Esc_PaginaInicio;
+import Escenarios.TicketesBaratos.Video_6.V6_Esc_PaginaInicio;
 import Recursos.Navegador.Pag_Navegador;
 import org.junit.After;
 import org.junit.Before;

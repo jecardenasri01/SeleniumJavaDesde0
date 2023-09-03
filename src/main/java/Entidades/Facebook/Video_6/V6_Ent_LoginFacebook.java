@@ -1,6 +1,6 @@
-package Entidades.Facebook;
+package Entidades.Facebook.Video_6;
 
-public class V6_Ent_RegistroFacebook {
+public class V6_Ent_LoginFacebook {
     public String usuario;
     public String clave;
     public String getUsuario() {
