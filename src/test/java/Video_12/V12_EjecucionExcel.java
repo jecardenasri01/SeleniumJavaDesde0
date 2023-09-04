@@ -1,14 +1,14 @@
-package Video_11;
+package Video_12;
 
-import Escenarios.demoQa.V10_Elementos;
 import Recursos.Data.Excel.Dat_Excel;
-import Recursos.Navegador.Pag_Navegador;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
-public class V11_EjecucionExcel {
+import javax.swing.table.DefaultTableModel;
+
+public class V12_EjecucionExcel {
     public static WebDriver driver;
     Dat_Excel dat_excel;
 
@@ -36,11 +36,14 @@ public class V11_EjecucionExcel {
 
 
     }
+    private DefaultTableModel dataTable;
 
     @Test
     public void ModificarElementos() {
         InstanciasBasicas();
         dat_excel.excelAbrirConexion(false);
+        dataTable = dat_excel.excelTabla();
+        dat_excel.excelCerrarConexion();
 
     }
 }

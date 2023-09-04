@@ -17,7 +17,7 @@ Url Usadas
 Maven Repository : https://mvnrepository.com/
 Facebook : https://www.facebook.com/
 Ticketes baratos : https://www.tiquetesbaratos.com/
-
+Demoqa : https://demoqa.com/elements
 
 Contenido
 
@@ -38,3 +38,9 @@ Contenido
    * Realizar registro en facebook dia , mes y año
 9) Condicionales if,else if y switch
    * Realizar registro en facebook genero mujer,hombre o personalizado
+10) Manejo Java Script 
+    * editar , eliminar y resaltar objetos en demoqa
+11) Manejo Excel / abrir conexión 
+12) Manejo Excel / obtener datos en un data table
+
+
