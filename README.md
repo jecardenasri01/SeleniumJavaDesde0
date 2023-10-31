@@ -9,7 +9,8 @@ Ponga en practica con ejemplos :
 
 Diseño :
 * Proyecto: maven
-* Version Apache Maven: 3.8.6 
+* Version Apache Maven: 3.8.6
+* Version de selenium compatible 4.11.0
 * Versión Chrome compatible : 118.0.5993.70
 * Version Java : 1.8.0_202
 
