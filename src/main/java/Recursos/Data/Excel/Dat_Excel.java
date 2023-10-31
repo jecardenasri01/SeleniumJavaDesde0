@@ -20,8 +20,7 @@ public class Dat_Excel {
     public String excelFilePath = "D:/git/SeleniumJavaDesde0/src/main/java/Recursos/Data/Insumos/Testing.xlsx"; // Ruta del archivo Excel a actualizar
     int numerofila = 0; // Número de fila a actualizar (índice 0)
 
-    // conexion excel
-    //region
+    //region conexion excel
     public void excelAbrirConexion(boolean actualizar){
         try {
             excelFile = new FileInputStream(excelFilePath);
@@ -43,9 +42,39 @@ public class Dat_Excel {
             System.out.println(fallo.getMessage());
         }
     }
+
+
     //endregion
-    // obtener informacion excel
-    //region
+    //region obtener cantidad filas excel
+    public int obtenerFilas(){
+        excelAbrirConexion(false);
+        int cantidadFilas = 0;
+        // Iterar a través de las filas en la hoja
+        for (Row row : sheet) {
+            // Verificar si la fila no está vacía
+            if (row != null)
+            {
+                // Iterar a través de las celdas en la fila
+                boolean rowHasData = false;
+                for (Cell cell : row) {
+                    if (cell != null && cell.getCellType() != CellType.BLANK) {
+                        // La celda no está vacía o nula
+                        rowHasData = true;
+                        break;
+                    }
+                }
+                // Si la fila tiene al menos una celda con datos, incrementa el contador
+                if (rowHasData) {
+                    cantidadFilas++;
+                }
+            }
+        }
+        cantidadFilas--;
+        excelCerrarConexion();
+        return cantidadFilas;
+    }
+    //endregion
+    //region obtener informacion excel
     public DefaultTableModel excelTabla(){
         dataTable = new DefaultTableModel(); // Instancia el DataTable
 
@@ -76,6 +105,17 @@ public class Dat_Excel {
         }
 
         return dataTable;
+    }
+    // Método para obtener el valor de una celda específica basado en el número de fila y el nombre de columna
+    public Object obtenerValorColumna(int rowIndex, String columnName) {
+        int columnIndex = dataTable.findColumn(columnName);
+
+        if (columnIndex == -1) {
+            System.out.println("Column not found: " + columnName);
+            return null;
+        }
+
+        return dataTable.getValueAt(rowIndex, columnIndex);
     }
     //endregion
 }

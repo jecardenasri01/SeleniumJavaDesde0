@@ -10,10 +10,11 @@ Ponga en practica con ejemplos :
 Diseño :
 * Proyecto: maven
 * Version Apache Maven: 3.8.6 
-* Versión Chrome compatible : 115.0.5790.171
+* Versión Chrome compatible : 118.0.5993.70
 * Version Java : 1.8.0_202
 
 Url Usadas
+Descargar chrome driver : https://googlechromelabs.github.io/chrome-for-testing/#stable
 Maven Repository : https://mvnrepository.com/
 Facebook : https://www.facebook.com/
 Ticketes baratos : https://www.tiquetesbaratos.com/
@@ -40,7 +41,9 @@ Contenido
    * Realizar registro en facebook genero mujer,hombre o personalizado
 10) Manejo Java Script 
     * editar , eliminar y resaltar objetos en demoqa
-11) Manejo Excel / abrir conexión 
-12) Manejo Excel / obtener datos en un data table
+11) 11/1) Manejo Excel / abrir conexión 
+12) 11/2) Manejo Excel / manejo data
+13) 11/3) Manejo Excel / obtener datos en un data table
+14) 11/4) Manejo Excel / trabajar con varias filas de excel
 
 

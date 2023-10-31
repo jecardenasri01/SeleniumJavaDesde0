@@ -19,6 +19,7 @@ public class Pag_Navegador {
         //si lo queremos incognito - agregar un plugin - que se ejecute en pantalla completa
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized");
+        options.addArguments("--remote-allow-origins=*");
         // intanciamos el chrome driver para abrir el navegador
         driver = new ChromeDriver(options);
         // url a la que se quiere automatizar
