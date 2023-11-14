@@ -8,6 +8,9 @@ import java.io.FileOutputStream;
 import java.util.Iterator;
 
 
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Dat_Excel {
@@ -118,4 +121,50 @@ public class Dat_Excel {
         return dataTable.getValueAt(rowIndex, columnIndex);
     }
     //endregion
+
+    public void EscrituraDatos(Integer numeroFila){
+        excelAbrirConexion(true);
+
+        Integer posicionCelda=0;
+        numeroFila++;
+        String valorNuevo = "ok";
+        String columnaSetear = "resultado";
+
+        XSSFSheet hojaExcel = (XSSFSheet) sheet;
+        XSSFRow filaEncabezado = hojaExcel.getRow(numeroFila - 1);
+        XSSFRow filaActualizar = hojaExcel.getRow(numeroFila );
+
+        for (int i = 0; i < filaEncabezado.getLastCellNum(); i++) {
+          //  String pruebas hojaExcel.  _rows.get(1)._cells.get(0).toString()
+            String prueba = hojaExcel.getRow(0).getCell(i).toString();
+            if (prueba.equals(columnaSetear))
+            {
+                posicionCelda = i;
+                break;
+            }
+        }
+        if (posicionCelda != 0) {
+
+            // Buscamos la celda "resultado"
+            XSSFCell celda= filaActualizar.createCell(posicionCelda++);
+            // Actualizamos el valor de la celda con "exitoso" o "fallido"
+            celda.setCellValue(valorNuevo);
+
+            try{
+            // Guardamos los cambios en el archivo si es necesario
+            if (fos != null) {
+                workbook.write(fos);
+                fos.close();
+            }
+            }catch (Exception fallo )
+            {
+
+            }
+            System.out.println("Celda actualizada exitosamente.");
+        } else {
+            System.out.println("No se encontró la celda 'resultado' en la fila especificada.");
+        }
+
+        excelCerrarConexion();
+    }
 }

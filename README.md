@@ -10,16 +10,16 @@ Ponga en practica con ejemplos :
 Diseño :
 * Proyecto: maven
 * Version Apache Maven: 3.8.6
+* Version Java : 17
 * Version de selenium compatible 4.11.0
-* Versión Chrome compatible : 118.0.5993.70
-* Version Java : 1.8.0_202
+* Versión Chrome compatible : 119.0.6045.124
 
 Url Usadas
-Descargar chrome driver : https://googlechromelabs.github.io/chrome-for-testing/#stable
-Maven Repository : https://mvnrepository.com/
-Facebook : https://www.facebook.com/
-Ticketes baratos : https://www.tiquetesbaratos.com/
-Demoqa : https://demoqa.com/elements
+- Descargar chrome driver : https://googlechromelabs.github.io/chrome-for-testing/#stable
+- Maven Repository : https://mvnrepository.com/
+- Facebook : https://www.facebook.com/
+- Ticketes baratos : https://www.tiquetesbaratos.com/
+- Demoqa : https://demoqa.com/elements
 
 Contenido
 

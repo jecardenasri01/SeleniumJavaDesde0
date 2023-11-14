@@ -4,6 +4,7 @@ import Entidades.Facebook.Video_7.V7_Ent_RegistroFacebook;
 import Escenarios.Facebook.Video_9.V9_Esc_PaginaInicioFacebook;
 import Recursos.Data.Excel.Dat_Excel;
 import Recursos.Navegador.Pag_Navegador;
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -58,24 +59,27 @@ public class V11_4_EjecucionExcel {
         v7_ent_registroFacebook.dia = dat_excel.obtenerValorColumna(numerofila,"dia").toString();
         v7_ent_registroFacebook.ano =dat_excel.obtenerValorColumna(numerofila,"ano").toString();
         v7_ent_registroFacebook.mes =dat_excel.obtenerValorColumna(numerofila,"mes").toString();
-        v7_ent_registroFacebook.sexo =dat_excel.obtenerValorColumna(numerofila,"sexo").toString();
+       // v7_ent_registroFacebook.sexo =dat_excel.obtenerValorColumna(numerofila,"sexo").toString();
 
 
         dat_excel.excelCerrarConexion();
     }
     private DefaultTableModel dataTable;
 
+
+
     @Test
     public void ModificarElementos() {
 
         for (int numerofila = 0; numerofila < numerofilas; numerofila++) {
 
-            AbrirNavegador();
+  //          AbrirNavegador();
             InstanciasBasicas();
             LecturaDatos(numerofila);
-            V9_esc_paginaInicioFacebook.RegistroFacebook(v7_ent_registroFacebook);
+        //    V9_esc_paginaInicioFacebook.RegistroFacebook(v7_ent_registroFacebook);
 
-            CerrarNavegador();
+//            CerrarNavegador();
+            dat_excel.EscrituraDatos(numerofila);
         }
     }
 }
