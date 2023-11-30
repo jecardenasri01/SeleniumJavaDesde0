@@ -46,5 +46,6 @@ Contenido
 12) 11/2) Manejo Excel / manejo data
 13) 11/3) Manejo Excel / obtener datos en un data table
 14) 11/4) Manejo Excel / trabajar con varias filas de excel
+15) 11/5) Manejo Excel / Escribir excel
 
 

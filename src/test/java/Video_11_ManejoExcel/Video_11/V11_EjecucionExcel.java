@@ -1,8 +1,6 @@
-package Video_11;
+package Video_11_ManejoExcel.Video_11;
 
-import Escenarios.demoQa.V10_Elementos;
 import Recursos.Data.Excel.Dat_Excel;
-import Recursos.Navegador.Pag_Navegador;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

@@ -23,6 +23,9 @@ public class Dat_Excel {
     public String excelFilePath = "D:/git/SeleniumJavaDesde0/src/main/java/Recursos/Data/Insumos/Testing.xlsx"; // Ruta del archivo Excel a actualizar
     int numerofila = 0; // Número de fila a actualizar (índice 0)
 
+    int posicionCelda=0;
+    XSSFRow filaActualizar;
+
     //region conexion excel
     public void excelAbrirConexion(boolean actualizar){
         try {
@@ -121,28 +124,32 @@ public class Dat_Excel {
         return dataTable.getValueAt(rowIndex, columnIndex);
     }
     //endregion
-
-    public void EscrituraDatos(Integer numeroFila){
+    //region escribir excel
+    public void EscrituraDatos(Integer numeroFila,String columnaActualizar,String valorNuevo){
         excelAbrirConexion(true);
-
-        Integer posicionCelda=0;
+        posicionCelda = PosicionColumna(numeroFila,columnaActualizar);
+        ActualizarCelda(valorNuevo);
+        excelCerrarConexion();
+    }
+    public int PosicionColumna(Integer numeroFila,String columnaActualizar){
         numeroFila++;
-        String valorNuevo = "ok";
-        String columnaSetear = "resultado";
 
         XSSFSheet hojaExcel = (XSSFSheet) sheet;
         XSSFRow filaEncabezado = hojaExcel.getRow(numeroFila - 1);
-        XSSFRow filaActualizar = hojaExcel.getRow(numeroFila );
+        filaActualizar = hojaExcel.getRow(numeroFila );
 
         for (int i = 0; i < filaEncabezado.getLastCellNum(); i++) {
-          //  String pruebas hojaExcel.  _rows.get(1)._cells.get(0).toString()
             String prueba = hojaExcel.getRow(0).getCell(i).toString();
-            if (prueba.equals(columnaSetear))
+            if (prueba.equals(columnaActualizar))
             {
                 posicionCelda = i;
                 break;
             }
         }
+        return posicionCelda;
+    }
+
+    public void ActualizarCelda(String valorNuevo){
         if (posicionCelda != 0) {
 
             // Buscamos la celda "resultado"
@@ -151,20 +158,19 @@ public class Dat_Excel {
             celda.setCellValue(valorNuevo);
 
             try{
-            // Guardamos los cambios en el archivo si es necesario
-            if (fos != null) {
-                workbook.write(fos);
-                fos.close();
-            }
+                // Guardamos los cambios en el archivo si es necesario
+                if (fos != null) {
+                    workbook.write(fos);
+                    fos.close();
+                }
             }catch (Exception fallo )
             {
-
+                fallo.printStackTrace(); // Imprime la traza de la excepción para debug
             }
             System.out.println("Celda actualizada exitosamente.");
         } else {
             System.out.println("No se encontró la celda 'resultado' en la fila especificada.");
         }
-
-        excelCerrarConexion();
     }
+    //endregion
 }

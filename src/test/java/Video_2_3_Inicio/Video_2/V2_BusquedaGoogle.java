@@ -1,4 +1,4 @@
-package Video_2;
+package Video_2_3_Inicio.Video_2;
 
 import Recursos.Navegador.Pag_Navegador;
 import org.junit.Test;
