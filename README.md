@@ -12,7 +12,7 @@ Diseño :
 * Version Apache Maven: 3.8.6
 * Version Java : 17
 * Version de selenium compatible 4.11.0
-* Versión Chrome compatible : 119.0.6045.124
+* Versión Chrome compatible : 121.0.6167.161
 
 Url Usadas
 - Descargar chrome driver : https://googlechromelabs.github.io/chrome-for-testing/#stable

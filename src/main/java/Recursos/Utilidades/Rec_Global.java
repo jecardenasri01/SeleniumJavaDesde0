@@ -5,7 +5,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class Rec_Global {
     WebDriver driver;
@@ -55,4 +60,9 @@ public class Rec_Global {
         JavascriptExecutor js = (JavascriptExecutor)driver;
         js.executeScript("arguments[0].removeAttribute('"+atributo+"')",elemento);
     }
+    public void waitExplicitClick(String xpath,Integer minutos){
+        Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofMinutes(minutos));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+    }
+
 }
